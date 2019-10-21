@@ -1,0 +1,16 @@
+Joystick Self-Check
+9|Enable the joystick visualization to self-check accuracy of joystick inputs, externally configured deadzone shape and sensitivity, etc. 
+1|Show Joystick Self-Check Visualization|joystick_viz_enabled
+5|Visualization Size|joystick_viz_size|100|1000
+9|
+9|Self-Check Protips:
+9|- Joystick should trace smooth and consistent lines 
+9|  - Jagged/inconsistent traces may indicate controller needs to be repaired/replaced. Try using compressed air to clean out sensor.
+9|- Try rotating joystick all the way around edge in a circle
+9|  - Default deadzone shape and sensitivity should trace a circle
+9|  - Setting a higher sensitivity with an external tool (such as DS4Win or Steam controller config) will increase size of circle and cut off edges
+9|  - A squared deadzone (changed in Steam controller config) should instead trace a square
+9|  - NOTE: In-game sensitivity is NOT reflected in visualization
+9|- See plugin homepage for examples and more information
+9|
+9|Created by AlpacaFlightSim#0001 / @ken_colton
