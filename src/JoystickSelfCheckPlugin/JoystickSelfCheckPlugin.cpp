@@ -57,8 +57,8 @@ void JoystickSelfCheckPlugin::Render(CanvasWrapper canvas)
 	Vector2 canvasCenter = { canvasSize.X / 2, canvasSize.Y / 2 };
 
 	canvas.SetColor(255, 255, 255, 100);
-	canvas.SetPosition({ canvasCenter.X - *joystickVizSize / 2, canvasCenter.Y - *joystickVizSize / 2 });
-	canvas.DrawBox({ *joystickVizSize, *joystickVizSize });
+	canvas.SetPosition(Vector2({ canvasCenter.X - *joystickVizSize / 2, canvasCenter.Y - *joystickVizSize / 2 }));
+	canvas.DrawBox(Vector2({ *joystickVizSize, *joystickVizSize }));
 
 	int i = 0;
 	Vector2 prevPos;
@@ -71,7 +71,7 @@ void JoystickSelfCheckPlugin::Render(CanvasWrapper canvas)
 
 		canvas.SetColor(255, 255, 255, 255 - i * 2);
 		canvas.SetPosition(currentPos);
-		canvas.FillBox({ 5, 5 });
+		canvas.FillBox(Vector2({ 5, 5 }));
 
 		if (i > 0) {
 			ControllerInput prevInput = inputHistory[inputHistory.size() - i - 1];
