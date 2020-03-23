@@ -1,6 +1,6 @@
 #include "JoystickSelfCheckPlugin.h"
 
-BAKKESMOD_PLUGIN(JoystickSelfCheckPlugin, "Joystick Self-Check", "0.1", PLUGINTYPE_FREEPLAY)
+BAKKESMOD_PLUGIN(JoystickSelfCheckPlugin, "Joystick Self-Check", "0.2", PLUGINTYPE_FREEPLAY)
 
 #define INPUT_HISTORY_LENGTH 120
 
