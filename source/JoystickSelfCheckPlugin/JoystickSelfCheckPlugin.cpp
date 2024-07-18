@@ -67,7 +67,7 @@ void JoystickSelfCheckPlugin::Render(CanvasWrapper canvas)
 	{
 		ControllerInput input = *it;
 
-		Vector2 currentPos = { canvasCenter.X + (int)(*joystickVizSize / 2 * input.Yaw) - 3, canvasCenter.Y + (int)(*joystickVizSize / 2 * input.Pitch) - 3 };
+		Vector2 currentPos = { canvasCenter.X + (int)(*joystickVizSize / 2 * input.Steer) - 3, canvasCenter.Y + (int)(*joystickVizSize / 2 * input.Pitch) - 3 };
 
 		canvas.SetColor(255, 255, 255, 255 - i * 2);
 		canvas.SetPosition(currentPos);
@@ -75,9 +75,9 @@ void JoystickSelfCheckPlugin::Render(CanvasWrapper canvas)
 
 		if (i > 0) {
 			ControllerInput prevInput = inputHistory[inputHistory.size() - i - 1];
-			Vector2 prevPos = { canvasCenter.X + (int)(*joystickVizSize / 2 * prevInput.Yaw), canvasCenter.Y + (int)(*joystickVizSize / 2 * prevInput.Pitch) };
+			Vector2 prevPos = { canvasCenter.X + (int)(*joystickVizSize / 2 * prevInput.Steer), canvasCenter.Y + (int)(*joystickVizSize / 2 * prevInput.Pitch) };
 
-			canvas.DrawLine({ canvasCenter.X + (int)(*joystickVizSize / 2 * input.Yaw), canvasCenter.Y + (int)(*joystickVizSize / 2 * input.Pitch) }, prevPos);
+			canvas.DrawLine({ canvasCenter.X + (int)(*joystickVizSize / 2 * input.Steer), canvasCenter.Y + (int)(*joystickVizSize / 2 * input.Pitch) }, prevPos);
 		}
 
 		prevPos = currentPos;
